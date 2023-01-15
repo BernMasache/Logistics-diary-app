@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DE181C1C"
+    tools:context=".VehicleModifier">
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:padding="10dp"
+            android:gravity="center"
+            android:id="@+id/newVehicletext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update Vehicle"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textColor="#E35C18"
+            android:textAllCaps="true"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/plateNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/vehiclePlateNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Plate number"
+                android:inputType="textCapCharacters"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="241dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/vehicleColorId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/vehicleRoute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Vehicle Route"
+                tools:layout_editor_absoluteX="1dp"
+                tools:layout_editor_absoluteY="274dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutCapacity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/vehicleCapacityValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Capacity"
+                android:inputType="number"
+                tools:layout_editor_absoluteX="1dp"
+                tools:layout_editor_absoluteY="274dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            android:layout_width="match_parent"
+            android:padding="10dp"
+
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/vehicleTargetValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Target"
+                android:inputType="number"
+                tools:layout_editor_absoluteX="1dp"
+                tools:layout_editor_absoluteY="274dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/update_vehicle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Update"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="#E35C18"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            />
+        <TextView
+            android:gravity="center"
+            android:text="NOTE"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textColor="#FA1001"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:gravity="center_horizontal"
+            android:text="Deleting a vehicle will remove all its associated data."
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:gravity="center_horizontal"
+            android:text="This operation cannot be undone!"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/deleteVehicle"
+            android:padding="5dp"
+            android:textSize="20sp"
+            android:text="Remove"
+            android:textColor="@color/white"
+            android:backgroundTint="#AA1C13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

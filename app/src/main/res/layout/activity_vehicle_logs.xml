@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="5dp"
+    tools:context=".VehicleLogs">
+
+<!--    <fragment-->
+<!--        android:layout_marginBottom="10dp"-->
+<!--        android:id="@+id/vehicle_logs_fragment"-->
+<!--        class="com.example.firstapp.Fragments.VehicleLogsFragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"/>-->
+
+<!--    <fragment-->
+<!--        android:id="@+id/vehicle_logs_list_fragment"-->
+<!--        class="com.example.firstapp.Fragments.VehicleLogsFragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+<!--    </fragment>-->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_views"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:elevation="2dp"
+        android:padding="10dp"
+        app:cardBackgroundColor="@color/teal_700"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01"
+        tools:layout_editor_absoluteX="-34dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:weightSum="100"
+            tools:layout_editor_absoluteX="2dp"
+            tools:layout_editor_absoluteY="7dp">
+
+            <TextView
+                android:textColor="@color/purple_200"
+
+                android:id="@+id/plateId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:gravity="start"
+                android:text="Plate"
+                android:textSize="20sp" />
+
+            <TextView
+                android:textColor="@color/purple_200"
+
+                android:id="@+id/targetId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:gravity="end"
+                android:text="Target"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:elevation="2dp"
+        android:layout_below="@+id/card_views"
+        android:padding="10dp"
+        app:cardBackgroundColor="@color/teal_700"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="2dp"
+        app:layout_constraintTop_toBottomOf="@+id/card_views"
+        tools:layout_editor_absoluteX="10dp">
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.533"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.026">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/amountValueId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Amount"
+                    android:inputType="number"
+                    tools:layout_editor_absoluteX="1dp"
+                    tools:layout_editor_absoluteY="274dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="100"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/amount"
+                app:layout_constraintVertical_bias="0.043">
+
+                <Button
+                    android:id="@+id/dateBtnId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+
+                    android:text="SET DATE" />
+
+                <Button
+                    android:id="@+id/createLogBtnId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="50"
+                    android:text="ADD LOG" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/vehicle_logs_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+</RelativeLayout>

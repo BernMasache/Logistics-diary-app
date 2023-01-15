@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_gravity="top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:cardElevation="2dp"
+        android:elevation="2dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        app:cardBackgroundColor="@color/teal_700"
+        app:cardCornerRadius="4dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp">
+            <ImageView
+                android:id="@+id/imageView_flag"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:srcCompat="@drawable/ic_launcher1"
+                tools:ignore="VectorDrawableCompat" />
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/vehicle_plate"
+                android:textColor="#525352"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Plate No."
+                android:textSize="17sp"/>
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/vehicle_route"
+                android:layout_width="match_parent"
+                android:textColor="@color/purple_200"
+                android:layout_height="wrap_content"
+                android:text="Route"/>
+            <TextView
+                android:gravity="center"
+                android:id="@+id/vehicle_target"
+                android:textColor="#525352"
+                android:textSize="12sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Target" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>
